@@ -39,7 +39,7 @@ I have completed the work from the first 3 Assignment Quickstart videos.
 
 ## License
 
-    Copyright [2015] [Alexandra Munoz]
+    Copyright [2016] [Alexandra Munoz]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
