@@ -2,7 +2,7 @@
 
 **Flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **3** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -19,23 +19,24 @@ The following **optional** features are implemented:
 - [ ] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
-- [ ] Customize the UI.
+- [X] Customize the UI.
 
 The following **additional** features are implemented:
 
-- [ ]
+- [X] Added app icon
+- [X] Added app launch screen
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/VM13qTu.gif' title='Flicks Walkthrough' width='' alt='Flicks Walkthrough' />
+<img src='http://i.imgur.com/eFaZXfS.gif' title='Flicks Video Walkthrough' width='' alt='Flicks Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I have completed the requirements for the Flicks app. 
+I attempted to add a search bar but I was not successful as I could not quite figure out how to make an array of just the movie titles for users to search through as the filteredData array was String and another String class was required for the search to be conducted in. :(
 
 ## License
 
