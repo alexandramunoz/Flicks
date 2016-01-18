@@ -13,6 +13,10 @@
 		38BCB85E1C41FB3300DC2204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BCB85C1C41FB3300DC2204 /* LaunchScreen.storyboard */; };
 		38BCB8661C41FF2500DC2204 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCB8651C41FF2500DC2204 /* MoviesViewController.swift */; };
 		38BCB8691C4214CE00DC2204 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCB8681C4214CE00DC2204 /* MovieCell.swift */; };
+		38BCB8941C4C8A3C00DC2204 /* iconmonstr-video-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 38BCB8931C4C8A3C00DC2204 /* iconmonstr-video-8.png */; };
+		38BCB8961C4C8C1A00DC2204 /* iconmonstr-video-camera-11-240.png in Resources */ = {isa = PBXBuildFile; fileRef = 38BCB8951C4C8C1A00DC2204 /* iconmonstr-video-camera-11-240.png */; };
+		38BCB8981C4C8CB800DC2204 /* iconmonstr-video-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38BCB8971C4C8CB800DC2204 /* iconmonstr-video-3.png */; };
+		38BCB89A1C4C8DEB00DC2204 /* iconmonstr-video-camera-9-240.png in Resources */ = {isa = PBXBuildFile; fileRef = 38BCB8991C4C8DEB00DC2204 /* iconmonstr-video-camera-9-240.png */; };
 		E8DD22E286C9641FBF923ED9 /* Pods_Flicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54D3D92B9D25B23315D7198 /* Pods_Flicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		38BCB85F1C41FB3300DC2204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38BCB8651C41FF2500DC2204 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		38BCB8681C4214CE00DC2204 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		38BCB8931C4C8A3C00DC2204 /* iconmonstr-video-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconmonstr-video-8.png"; path = "../../Downloads/iconmonstr-video-8.png"; sourceTree = SOURCE_ROOT; };
+		38BCB8951C4C8C1A00DC2204 /* iconmonstr-video-camera-11-240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconmonstr-video-camera-11-240.png"; path = "../../Downloads/iconmonstr-video-camera-11-240.png"; sourceTree = SOURCE_ROOT; };
+		38BCB8971C4C8CB800DC2204 /* iconmonstr-video-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconmonstr-video-3.png"; path = "../../Downloads/iconmonstr-video-3.png"; sourceTree = SOURCE_ROOT; };
+		38BCB8991C4C8DEB00DC2204 /* iconmonstr-video-camera-9-240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconmonstr-video-camera-9-240.png"; path = "../../Downloads/iconmonstr-video-camera-9-240.png"; sourceTree = SOURCE_ROOT; };
 		C1C5935383FA5969F8C4B494 /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 		D54D3D92B9D25B23315D7198 /* Pods_Flicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7E6796B4988AB2E3770874 /* Pods-Flicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +74,11 @@
 				38BCB86A1C435E4F00DC2204 /* View Controllers */,
 				38BCB8671C42147E00DC2204 /* Views */,
 				38BCB8531C41FB3300DC2204 /* AppDelegate.swift */,
+				38BCB8951C4C8C1A00DC2204 /* iconmonstr-video-camera-11-240.png */,
+				38BCB8931C4C8A3C00DC2204 /* iconmonstr-video-8.png */,
 				38BCB8571C41FB3300DC2204 /* Main.storyboard */,
+				38BCB8991C4C8DEB00DC2204 /* iconmonstr-video-camera-9-240.png */,
+				38BCB8971C4C8CB800DC2204 /* iconmonstr-video-3.png */,
 				38BCB85A1C41FB3300DC2204 /* Assets.xcassets */,
 				38BCB85C1C41FB3300DC2204 /* LaunchScreen.storyboard */,
 				38BCB85F1C41FB3300DC2204 /* Info.plist */,
@@ -170,7 +182,11 @@
 			files = (
 				38BCB85E1C41FB3300DC2204 /* LaunchScreen.storyboard in Resources */,
 				38BCB85B1C41FB3300DC2204 /* Assets.xcassets in Resources */,
+				38BCB8941C4C8A3C00DC2204 /* iconmonstr-video-8.png in Resources */,
+				38BCB89A1C4C8DEB00DC2204 /* iconmonstr-video-camera-9-240.png in Resources */,
 				38BCB8591C41FB3300DC2204 /* Main.storyboard in Resources */,
+				38BCB8961C4C8C1A00DC2204 /* iconmonstr-video-camera-11-240.png in Resources */,
+				38BCB8981C4C8CB800DC2204 /* iconmonstr-video-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

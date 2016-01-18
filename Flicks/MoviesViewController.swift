@@ -10,12 +10,15 @@ import UIKit
 import AFNetworking
 import EZLoadingActivity
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var refreshControl: UIRefreshControl!
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UITableView!
     var movies : [NSDictionary]?
+    var filteredData: [String]!
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +30,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+        searchBar.delegate = self
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
@@ -86,16 +89,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         let imageUrl = NSURL(string: baseUrl + posterPath)
         
-        
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         cell.posterView.setImageWithURL(imageUrl!)
+        
+
         
         print("row \(indexPath.row)")
         
         return cell
         
     }
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
