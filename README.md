@@ -2,7 +2,7 @@
 
 **Flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **3** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -19,11 +19,12 @@ The following **optional** features are implemented:
 - [ ] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
-- [ ] Customize the UI.
+- [X] Customize the UI.
 
 The following **additional** features are implemented:
 
-- [ ]
+- [X] Added app icon
+- [X] Added app launch screen
 
 ## Video Walkthrough 
 
@@ -35,7 +36,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I have completed the requirements for the Flicks app. 
+
 
 ## License
 
