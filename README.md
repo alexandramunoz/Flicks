@@ -30,13 +30,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/VM13qTu.gif' title='Flicks Walkthrough' width='' alt='Flicks Walkthrough' />
+<img src='http://i.imgur.com/eFaZXfS.gif' title='Flicks Video Walkthrough' width='' alt='Flicks Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-
+I attempted to add a search bar but I was not successful as I could not quite figure out how to make an array of just the movie titles for users to search through as the filteredData array was String and another String class was required for the search to be conducted in. :(
 
 ## License
 
