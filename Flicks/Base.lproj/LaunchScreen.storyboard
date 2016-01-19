@@ -20,7 +20,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconmonstr-video-camera-11-240.png" id="Sc3-BL-Y0x">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconmonstr-video-camera-11-240" id="Sc3-BL-Y0x">
                                 <rect key="frame" x="58" y="120" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconmonstr-video-camera-11-240.png" width="240" height="240"/>
+        <image name="iconmonstr-video-camera-11-240" width="240" height="240"/>
     </resources>
 </document>

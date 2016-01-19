@@ -50,11 +50,11 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-video-8.png" id="9KX-s7-9YA">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-video-8" id="9KX-s7-9YA">
                                                     <rect key="frame" x="118" y="0.0" width="27" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-video-3.png" id="AwR-x9-FdF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-video-3" id="AwR-x9-FdF">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="98.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -149,8 +149,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconmonstr-video-3.png" width="600" height="550"/>
-        <image name="iconmonstr-video-8.png" width="600" height="600"/>
+        <image name="iconmonstr-video-3" width="600" height="550"/>
+        <image name="iconmonstr-video-8" width="600" height="600"/>
         <image name="iconmonstr-video-camera-9-240.png" width="240" height="240"/>
     </resources>
 </document>
