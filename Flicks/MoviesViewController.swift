@@ -10,15 +10,13 @@ import UIKit
 import AFNetworking
 import EZLoadingActivity
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var refreshControl: UIRefreshControl!
 
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var searchBar: UISearchBar!
     var movies : [NSDictionary]?
 
-    var filteredData: [String]!
     
    
     override func viewDidLoad() {
