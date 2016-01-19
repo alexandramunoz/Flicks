@@ -103,11 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flicks/MoviesViewController.swift"
-            timestampString = "474865020.961163"
+            timestampString = "474870288.339684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -119,11 +119,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flicks/MoviesViewController.swift"
-            timestampString = "474865020.961163"
+            timestampString = "474870288.339684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -135,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flicks/MoviesViewController.swift"
-            timestampString = "474865020.961163"
+            timestampString = "474869375.767032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>

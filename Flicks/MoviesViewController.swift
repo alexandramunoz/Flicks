@@ -22,6 +22,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        EZLoadingActivity.show("Loading...", disableUI: true)
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
@@ -66,7 +67,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        EZLoadingActivity.showWithDelay("Loading...", disableUI: true, seconds: 2)
+        
         
         if let movies = movies {
             return movies.count
@@ -79,11 +80,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
         let movie = movies![indexPath.row]
-        let title = movie["title"] as! String
-        let overview = movie["overview"] as! String
-        let posterPath = movie["poster_path"] as! String
-        
+        let title = movie["title"] as? String
+        let overview = movie["overview"] as? String
         let baseUrl = "http://image.tmdb.org/t/p/w500"
+        if let posterPath = movie["poster_path"] as? String{
+            
+        
         
         let imageUrl = NSURL(string: baseUrl + posterPath)
         
@@ -120,6 +122,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         cell.posterView.setImageWithURL(imageUrl!)
+        }
         
 
         
@@ -144,14 +147,24 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         })
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let movie = movies![indexPath!.row]
+        
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.movie = movie
+        
+        print("prepare for segue called")
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+
 
 }
