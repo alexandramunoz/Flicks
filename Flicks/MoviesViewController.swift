@@ -90,7 +90,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
-       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
         let movie = movies![indexPath.row]
@@ -100,45 +100,46 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let baseUrl = "http://image.tmdb.org/t/p/w500"
         if let posterPath = movie["poster_path"] as? String{
             
-        
-        
-        let imageUrl = NSURL(string: baseUrl + posterPath)
-        
-        let imageStringUrl = baseUrl + posterPath
-        let imageUrlRequest = NSURLRequest(URL: NSURL(string: imageStringUrl)!)
-        
-        let imageRequest = NSURLRequest(URL: NSURL(string: imageStringUrl)!)
-        cell.posterView.setImageWithURLRequest(
-            imageUrlRequest,
-            placeholderImage: nil,
-            success: { (imageUrl, imageResponse, image) -> Void in
-                
-                // imageResponse will be nil if the image is cached
-                if imageResponse != nil {
-                    print("Image was NOT cached, fade in image")
-                    cell.posterView.alpha = 0.0
-                    cell.posterView.image = image
-                    UIView.animateWithDuration(0.4, animations: { () -> Void in
-                        cell.posterView.alpha = 1.0
-                    
-                    })
-                } else {
-                    print("Image was cached so just update the image")
-                    cell.posterView.image = image
-                }
-            },
             
-            failure: { (imageRequest, imageResponse, error) ->
-                Void in
-                // do something for the failure condition
+            
+            let imageUrl = NSURL(string: baseUrl + posterPath)
+            
+            let imageStringUrl = baseUrl + posterPath
+            let imageUrlRequest = NSURLRequest(URL: NSURL(string: imageStringUrl)!)
+            
+            
+            let imageRequest = NSURLRequest(URL: NSURL(string: imageStringUrl)!)
+            cell.posterView.setImageWithURLRequest(
+                imageUrlRequest,
+                placeholderImage: nil,
+                success: { (imageUrl, imageResponse, image) -> Void in
+                    
+                    // imageResponse will be nil if the image is cached
+                    if imageResponse != nil {
+                        print("Image was NOT cached, fade in image")
+                        cell.posterView.alpha = 0.0
+                        cell.posterView.image = image
+                        UIView.animateWithDuration(0.4, animations: { () -> Void in
+                            cell.posterView.alpha = 1.0
+                            
+                        })
+                    } else {
+                        print("Image was cached so just update the image")
+                        cell.posterView.image = image
+                    }
+                },
                 
-        })
-
-        cell.titleLabel.text = title
-        cell.overviewLabel.text = overview
-        cell.posterView.setImageWithURL(imageUrl!)
+                failure: { (imageRequest, imageResponse, error) ->
+                    Void in
+                    // do something for the failure condition
+                    
+            })
+            
+            cell.titleLabel.text = title
+            cell.overviewLabel.text = overview
+            cell.posterView.setImageWithURL(imageUrl!)
         }
-        
+
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.whiteColor()
         cell.selectedBackgroundView = backgroundView
