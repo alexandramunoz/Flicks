@@ -74,7 +74,7 @@ The following **optional** features are implemented:
 - [X] Customize the navigation bar.
 
 The following **additional** features are implemented:
-- [X] Users now see stars that show the average rating of the movie (used Cosmos CocoaPod)
+- [X] Users now see stars that show the average rating of the movie when they click to see movie details (used Cosmos CocoaPod)
 
 ## Video Walkthrough 
 
