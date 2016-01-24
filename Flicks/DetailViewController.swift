@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class DetailViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var ratingView: CosmosView!
+    
     @IBOutlet weak var infoView: UIView!
     var movie = NSDictionary!()
     
@@ -28,6 +31,13 @@ class DetailViewController: UIViewController {
         
         let title = movie["title"] as? String
         titleLabel.text = title
+        
+        let rating = movie["vote_average"] as! Double
+        
+        ratingView.rating = rating/2
+        
+        ratingView.settings.fillMode = .Precise
+        
         
         let overview = movie["overview"]
         overviewLabel.text = overview as? String

@@ -96,6 +96,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let movie = movies![indexPath.row]
         let title = movie["title"] as? String
         let overview = movie["overview"] as? String
+        
         let baseUrl = "http://image.tmdb.org/t/p/w500"
         if let posterPath = movie["poster_path"] as? String{
             

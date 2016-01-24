@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>608B49B5DDACC601EE8044A1931993F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD8A2B6D1B7426C35946837230337214</key>
+		<key>F12A0D0875AC37ADE6C562DCEC5E7891</key>
 		<dict>
 			<key>primary</key>
 			<true/>
