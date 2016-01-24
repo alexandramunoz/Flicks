@@ -16,12 +16,26 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var movies : [NSDictionary]?
+    
+    var endpoint: String!
 
     
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.tintColor = UIColor(red: 0.25, green: 0.25, blue: 1.00, alpha: 0.8)
+            
+            let shadow = NSShadow()
+            shadow.shadowColor = UIColor.blueColor().colorWithAlphaComponent(0.5)
+            shadow.shadowOffset = CGSizeMake(2, 2);
+            shadow.shadowBlurRadius = 4;
+            navigationBar.titleTextAttributes = [
+                NSFontAttributeName : UIFont(name: "CopperPlate", size: 50.0)!,                NSForegroundColorAttributeName : UIColor(red: 0.05, green: 0.05, blue: 0.5, alpha: 0.8),
+                NSShadowAttributeName : shadow
+            ]
+        }
         EZLoadingActivity.show("Loading...", disableUI: true)
         
         refreshControl = UIRefreshControl()
@@ -32,7 +46,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
@@ -76,7 +90,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
         let movie = movies![indexPath.row]
@@ -124,6 +138,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.posterView.setImageWithURL(imageUrl!)
         }
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.whiteColor()
+        cell.selectedBackgroundView = backgroundView
 
         
         print("row \(indexPath.row)")
