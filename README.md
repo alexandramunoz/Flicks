@@ -80,7 +80,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src= 'http://i.imgur.com/v1nFSLx.gif' title='Flicks Week 2 Walkthrough' width='' alt='Flicks Week 2 Walkthrough' />
+<img src= 'http://i.imgur.com/9Jcqkck.gif' title='Flicks Week 2 Walkthrough' width='' alt='Flicks Week 2 Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
