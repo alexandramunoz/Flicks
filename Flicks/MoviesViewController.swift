@@ -141,7 +141,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
 
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.whiteColor()
+        backgroundView.backgroundColor = UIColor.redColor()
         cell.selectedBackgroundView = backgroundView
 
         

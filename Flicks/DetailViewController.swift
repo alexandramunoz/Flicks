@@ -43,13 +43,66 @@ class DetailViewController: UIViewController {
         overviewLabel.text = overview as? String
         
         overviewLabel.sizeToFit()
+    
+        
         
         let baseUrl = "http://image.tmdb.org/t/p/w500"
+        
         if let posterPath = movie["poster_path"] as? String{
             
             let imageUrl = NSURL(string: baseUrl + posterPath)
-          
-            posterimageView.setImageWithURL(imageUrl!)
+            
+            let smallbaseUrl = "https://image.tmdb.org/t/p/w45"
+            
+            let largebaseUrl = "https://image.tmdb.org/t/p/original"
+            
+           let smallImageUrl = smallbaseUrl + posterPath
+            let largeImageUrl = largebaseUrl + posterPath
+            
+            let largeimageUrl = NSURL(string: largebaseUrl + posterPath)
+            
+            let smallImageRequest = NSURLRequest(URL: NSURL(string: smallImageUrl)!)
+            let largeImageRequest = NSURLRequest(URL: NSURL(string: largeImageUrl)!)
+            
+            posterimageView.setImageWithURLRequest(
+                smallImageRequest,
+                placeholderImage: nil,
+                success: { (smallImageRequest, smallImageResponse, smallImage) -> Void in
+                    
+                    // smallImageResponse will be nil if the smallImage is already available
+                    // in cache (might want to do something smarter in that case).
+                    self.posterimageView.alpha = 0.0
+                    self.posterimageView.image = smallImage;
+                    
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        
+                        self.posterimageView.alpha = 1.0
+                        
+                        }, completion: { (success) -> Void in
+                            
+                            // The AFNetworking ImageView Category only allows one request to be sent at a time
+                            // per ImageView. This code must be in the completion block.
+                            self.posterimageView.setImageWithURLRequest(
+                                largeImageRequest,
+                                placeholderImage: smallImage,
+                                success: { (largeImageRequest, largeImageResponse, largeImage) -> Void in
+                                    
+                                    self.posterimageView.image = largeImage;
+                                    
+                                },
+                                failure: { (request, response, error) -> Void in
+                                        self.posterimageView.setImageWithURL(imageUrl!)
+                                    // do something for the failure condition of the large image request
+                                    // possibly setting the ImageView's image to a default image
+                            })
+                    })
+                },
+                failure: { (request, response, error) -> Void in
+                        self.posterimageView.setImageWithURL(largeimageUrl!)
+                    // do something for the failure condition
+                    // possibly try to get the large image
+
+            })
         }
         
         
