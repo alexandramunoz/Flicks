@@ -74,13 +74,13 @@ The following **optional** features are implemented:
 - [X] Customize the navigation bar.
 
 The following **additional** features are implemented:
-- [X] Users now see stars that show the average rating of the movie (used Cosmos CocoaPod)
+- [X] Users now see stars that show the average rating of the movie when they click to see movie details (used Cosmos CocoaPod)
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src= 'http://i.imgur.com/gLgUDkf.gif' title='Flicks Week 2 Walkthrough' width='' alt='Flicks Week 2 Walkthrough' />
+<img src= 'http://i.imgur.com/9Jcqkck.gif' title='Flicks Week 2 Walkthrough' width='' alt='Flicks Week 2 Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
